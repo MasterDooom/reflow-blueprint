@@ -8,3 +8,20 @@ header{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:
 .compare-head{padding-bottom:45px}.table{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;box-shadow:var(--shadow);margin-bottom:18px}.row{display:grid;grid-template-columns:minmax(0,1fr) 130px 130px;min-height:57px;align-items:center;border-bottom:1px solid var(--line)}.row:last-child{border:0}.row>div{padding:0 18px}.head{font:9px "DM Mono";color:#999095}.feature{font-size:12px;color:#5f585c}.reflow{font:12px "DM Mono"}.yes{color:#c9436a!important;font-size:15px!important}.other{color:#a69da1;font:12px "DM Mono"}.compare-note{display:flex;justify-content:space-between;color:#9a9094;font:9px "DM Mono"}.compare-note a{color:#c9436a;text-decoration:underline;text-underline-offset:3px}
 footer{border-top:1px solid var(--line);padding:20px 0;color:#a0979b;font:9px "DM Mono"}footer .wrap{display:flex;justify-content:space-between}
 @media(max-width:720px){.wrap{width:calc(100% - 30px)}nav{gap:12px}nav a:first-child{display:none}.hero-inner{padding:65px 0 75px}.hero-meta{display:block;margin-top:55px}.hero-meta div+div{margin-top:9px}.blueprint{grid-template-columns:1fr}.stage{min-height:275px}.loop{display:block}.loop span{display:block;margin-top:7px}.section-top{display:block}.section-intro{margin-top:20px}.row{grid-template-columns:minmax(0,1fr) 65px 75px}.row>div{padding:0 8px}.feature{font-size:11px}.compare-note{display:block}.compare-note span{display:block;margin-bottom:10px}}
+
+/* blueprint details */
+.expand{
+  position:absolute;right:22px;bottom:20px;
+  border:1px solid #edc5d2;background:#fff8fb;
+  color:#bd315b;padding:7px 10px;border-radius:5px;
+  font:9px "DM Mono",monospace;cursor:pointer;
+}
+.expand:hover{background:#fde1ea}
+.details{display:none;margin-top:20px;padding-top:15px;border-top:1px solid #efdde3}
+.stage.open .details{display:block}
+.stage.open .tech{display:none}
+.stage.open .expand{position:static;display:block;margin-top:14px}
+.detail-row{display:flex;justify-content:space-between;gap:15px;padding:8px 0;border-bottom:1px solid #f3e7eb;font-size:9px;line-height:1.45}
+.detail-row:last-child{border-bottom:0}
+.detail-row span{flex:0 0 58px;color:#bd315b;font:8px "DM Mono",monospace}
+.detail-row b{font-weight:500;text-align:right;color:var(--muted)}
