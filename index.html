@@ -1,183 +1,53 @@
 <!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ReFlow</title><link rel="stylesheet" href="style.css"><script src="https://cdn.jsdelivr.net/npm/animejs@4.2.2/lib/anime.iife.min.js"></script></head><body>
-<header class="wrap"><a class="logo" href="index.html">Re<span>Flow</span></a><nav><a href="#blueprint">blueprint</a><a href="compare.html">comparison</a><a class="nav-cta" href="#why-reflow">why reflow →</a></nav></header>
+<header class="wrap"><a class="logo" href="index.html">Re<span>Flow</span></a><nav><a class="nav-blueprint" href="#blueprint">blueprint</a><a class="nav-cta" href="#why-reflow">why reflow →</a></nav></header>
 <section class="hero"><div class="wrap hero-inner"><div class="eyebrow reveal"><span>REFLOW</span> / HACKATHON ORCHESTRATION</div><h1 class="reveal">Your idea is<br>only the <em>start.</em></h1><p class="hero-copy reveal">ReFlow connects the challenge, your team and your GitHub repository into one adaptive workflow — from the first idea to the final review.</p><div class="actions reveal"><a class="btn primary" href="#blueprint">See the blueprint ↓</a><a class="btn secondary" href="compare.html">View comparison</a></div><div class="hero-meta reveal"><div>IDEATE · PLAN · BUILD · REVIEW</div><div>GITHUB → LIVE PROJECT STATE</div></div></div></section>
 <section class="section" id="blueprint"><div class="wrap">
-<div class="blueprint-switch reveal"><div><span class="section-number">01 / BLUEPRINT</span><h2 class="section-title">How ReFlow<br>moves with you.</h2></div><div class="switch-actions"><a class="switch active" href="#blueprint">Blueprint <span>↗</span></a><a class="switch" href="compare.html">Competition <span>↗</span></a></div></div>
-<div class="section-top blueprint-intro"><p class="section-intro">Four stages. One shared project state. Expand a stage to see what is actually happening underneath.</p><div class="flow-label mono">BRIEF → TEAM → REPO → REVIEW</div></div>
+<div class="blueprint-switch reveal"><div><span class="section-number">01 / BLUEPRINT</span><h2 class="section-title">How ReFlow<br>moves with you.</h2></div><div class="switch-actions"><a class="switch active" href="#blueprint">Blueprint <span>↗</span></a><a class="switch" href="compare.html">Comparison <span>↗</span></a></div></div>
+<div class="section-top blueprint-intro"><p class="section-intro">Four stages. One shared project state. Open a stage to inspect the system underneath it.</p><div class="flow-label mono">BRIEF → TEAM → REPO → REVIEW</div></div>
 <div class="blueprint">
-<article class="stage reveal" data-stage="ideate"><div class="stage-top"><div class="num">01</div><div class="arrow">↗</div></div><h3>IDEATE</h3><p>Turn the challenge brief into a measurable idea score before the team commits.</p><div class="tech"><span>pdfplumber</span> · LLM · RUBRIC</div><button class="expand" aria-expanded="false">+ details</button><div class="details">
-<div class="detail-title"><span>IDEA PIPELINE</span><i>01 → 04</i></div>
-<div class="pipeline"><div><b>BRIEF</b><small>rubric PDF</small></div><em>→</em><div><b>PARSE</b><small>pdfplumber</small></div><em>→</em><div><b>SCORE</b><small>per criterion</small></div><em>→</em><div><b>GAP LIST</b><small>LLM output</small></div></div>
-<div class="detail-stack">pdfplumber · Pydantic · LLM scoring</div></div></article>
-<article class="stage reveal" data-stage="plan"><div class="stage-top"><div class="num">02</div><div class="arrow">↗</div></div><h3>PLAN</h3><p>Read the team's GitHub history, then turn the idea into work that fits the people and the clock.</p><div class="tech"><span>GITHUB API</span> · FEATURE TREE · TASKS</div><button class="expand" aria-expanded="false">+ details</button><div class="details">
-<div class="detail-title"><span>TEAM → TASK GRAPH</span><i>02 → 17</i></div>
-<div class="pipeline"><div><b>GITHUB</b><small>profile + repos</small></div><em>→</em><div><b>SKILLS</b><small>history signals</small></div><em>→</em><div><b>FEATURES</b><small>bounded tree</small></div><em>→</em><div><b>ASSIGN</b><small>capacity aware</small></div></div>
-<div class="detail-stack">GitHub OAuth · GitHub API · FastAPI</div></div></article>
-<article class="stage reveal" data-stage="build"><div class="stage-top"><div class="num">03</div><div class="arrow">↗</div></div><h3>BUILD</h3><p>The repository becomes a live signal, so ReFlow can see drift, stalled work and changing progress.</p><div class="tech"><span>WEBHOOKS</span> · REDIS · SSE</div><button class="expand" aria-expanded="false">+ details</button><div class="details">
-<div class="detail-title"><span>LIVE PROJECT STATE</span><i>03 / REAL TIME</i></div>
-<div class="pipeline"><div><b>COMMIT</b><small>GitHub event</small></div><em>→</em><div><b>LOG</b><small>append-only</small></div><em>→</em><div><b>QUEUE</b><small>Redis / ARQ</small></div><em>→</em><div><b>STREAM</b><small>SSE</small></div></div>
-<div class="detail-stack">GitHub Webhooks · Redis · ARQ · SSE</div></div></article>
-<article class="stage reveal" data-stage="review"><div class="stage-top"><div class="num">04</div><div class="arrow">↗</div></div><h3>REVIEW</h3><p>Interrogate the finished repository like a judge: grounded questions, technical gaps and contribution evidence.</p><div class="tech"><span>RAG</span> · TREE-SITTER · PGVECTOR</div><button class="expand" aria-expanded="false">+ details</button><div class="details">
-<div class="detail-title"><span>CODE → JUDGE → REPORT</span><i>04 / FINAL</i></div>
-<div class="pipeline"><div><b>REPO</b><small>code + README</small></div><em>→</em><div><b>PARSE</b><small>tree-sitter</small></div><em>→</em><div><b>RAG</b><small>pgvector / HNSW</small></div><em>→</em><div><b>JUDGE</b><small>targeted Qs</small></div></div>
-<div class="analytics-line"><span>ANALYTICS</span><b>LOC</b><b>FEATURE</b><b>ACTIVITY HEATMAP</b><b>PDF REPORT</b></div>
-<div class="detail-stack">tree-sitter · pgvector · HNSW · RAG</div></div></article>
+<article class="stage reveal" data-stage="ideate"><div class="stage-top"><div class="num">01</div><div class="arrow">↗</div></div><h3>IDEATE</h3><p>Turn the challenge brief into a measurable idea score before the team commits.</p><div class="tech"><span>pdfplumber</span> · LLM · RUBRIC</div><button class="expand" type="button" aria-expanded="false">+ details</button></article>
+<article class="stage reveal" data-stage="plan"><div class="stage-top"><div class="num">02</div><div class="arrow">↗</div></div><h3>PLAN</h3><p>Read the team's GitHub history, then turn the idea into work that fits the people and the clock.</p><div class="tech"><span>GITHUB API</span> · FEATURE TREE · TASKS</div><button class="expand" type="button" aria-expanded="false">+ details</button></article>
+<article class="stage reveal" data-stage="build"><div class="stage-top"><div class="num">03</div><div class="arrow">↗</div></div><h3>BUILD</h3><p>The repository becomes a live signal, so ReFlow can see drift, stalled work and changing progress.</p><div class="tech"><span>WEBHOOKS</span> · REDIS · SSE</div><button class="expand" type="button" aria-expanded="false">+ details</button></article>
+<article class="stage reveal" data-stage="review"><div class="stage-top"><div class="num">04</div><div class="arrow">↗</div></div><h3>REVIEW</h3><p>Interrogate the finished repository like a judge: grounded questions, technical gaps and contribution evidence.</p><div class="tech"><span>RAG</span> · TREE-SITTER · PGVECTOR</div><button class="expand" type="button" aria-expanded="false">+ details</button></article>
 </div>
 <div class="loop reveal"><b>THE LOOP</b><span>challenge → idea → team → repo → review</span><span>↻ repository activity feeds the next decision</span></div></div></section>
 
 <div class="blueprint-modal" id="blueprintModal" aria-hidden="true">
   <div class="modal-backdrop"></div>
   <section class="bp-modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <header class="bp-modal-head">
-      <span class="bp-modal-kicker">RE:FLOW / <b id="modalStageKicker">IDEATE</b></span>
-      <button class="modal-close" type="button" aria-label="Close">×</button>
-    </header>
-    <nav class="bp-stage-nav" aria-label="Blueprint stages">
-      <button data-blueprint-stage="ideate">← IDEATE</button>
-      <button data-blueprint-stage="plan">PLAN</button>
-      <button data-blueprint-stage="build">BUILD</button>
-      <button data-blueprint-stage="review">REVIEW →</button>
-    </nav>
-    <div class="bp-modal-body">
-      <div class="bp-modal-title"><div><span class="modal-number" id="modalNumber">01</span><h2 id="modalTitle">IDEATE</h2></div><span class="modal-status mono" id="modalStatus">IDEA PIPELINE</span></div>
-      <div class="modal-map" id="modalMap" tabindex="0"></div>
+    <div class="bp-modal-head"><span class="bp-modal-kicker">RE:FLOW / <b id="modalStageKicker">IDEATE</b></span><button class="modal-close" type="button" aria-label="Close">×</button></div>
+    <div class="bp-stage-nav" aria-label="Blueprint stages">
+      <button data-blueprint-stage="ideate">01 IDEATE</button><button data-blueprint-stage="plan">02 PLAN</button><button data-blueprint-stage="build">03 BUILD</button><button data-blueprint-stage="review">04 REVIEW</button>
     </div>
-    <div class="bp-system-strip">
-      <div><b>FRONTEND</b><span>Next.js · TypeScript · Tailwind · SSE</span></div>
-      <div><b>BACKEND</b><span>FastAPI · Pydantic · REST · Webhooks</span></div>
-      <div><b>DATABASE</b><span>Postgres · pgvector · HNSW · Event Log</span></div>
-      <div><b>ASYNC</b><span>Redis · ARQ</span></div>
-    </div>
+    <div class="bp-modal-body"><div class="bp-modal-title"><div><span class="modal-number" id="modalNumber">01</span><h2 id="modalTitle">IDEATE</h2></div><span class="modal-status mono" id="modalStatus">IDEA PIPELINE</span></div><div class="modal-map" id="modalMap" tabindex="0"></div></div>
+    <div class="bp-system-strip"><div><b>FRONTEND</b><span>Next.js · TypeScript · Tailwind · SSE</span></div><div><b>BACKEND</b><span>FastAPI · Pydantic · REST · Webhooks</span></div><div><b>DATABASE</b><span>Postgres · pgvector · HNSW · Event Log</span></div><div><b>ASYNC</b><span>Redis · ARQ</span></div></div>
   </section>
 </div>
 <section class="highlight" id="why-reflow"><div class="wrap"><h2 class="reveal">Don't just make a plan.<br>Make it <span>adapt.</span></h2><p class="reveal">ReFlow doesn't stop when the team starts coding. The repository tells the system what is actually happening.</p></div></section>
 <footer><div class="wrap"><span>REFLOW / 2026</span><span>BUILD WITH INTENT</span></div></footer>
-<script>const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.style.transition="opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)";e.target.style.opacity=1;e.target.style.transform="none";io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll(".reveal").forEach(x=>io.observe(x));if(window.anime)anime.animate(".hero h1",{translateY:[20,0],opacity:[0,1],duration:850,easing:"easeOutCubic"});
-
-const blueprintData = {
-  ideate: {
-    number:'01', title:'IDEATE', status:'IDEA PIPELINE', stack:'pdfplumber · LLM · Pydantic',
-    nodes:[
-      ['input','CHALLENGE BRIEF / RUBRIC PDF','challenge brief + judging rubric'],
-      ['tool','PDFPLUMBER','extract judging criteria'],
-      ['process','RUBRIC EXTRACTION','criteria become scoreable checks'],
-      ['process','PER-CRITERION LLM SCORING','score the idea against each criterion'],
-      ['output','GAP LIST','expose weak / missing areas'],
-      ['output','IDEA SCORE','score + actionable gaps']
-    ]
-  },
-  plan: {
-    number:'02', title:'PLAN', status:'TEAM → TASK GRAPH', stack:'GitHub OAuth · GitHub API · FastAPI · Postgres',
-    nodes:[
-      ['input','TEAM + GITHUB','profile + previous repositories'],
-      ['tool','GITHUB SKILL PROFILING','infer strengths from profile + repository history'],
-      ['process','BOUNDED FEATURE TREE','features with brief descriptions'],
-      ['process','CAPACITY CONSTRAINTS','available capacity + hackathon deadline'],
-      ['process','TASK ASSIGNMENT','match skills to capacity'],
-      ['output','TIME-AWARE TASK BOARD','ownership + deadline-aware execution']
-    ],
-    branches:[['PROFILE','GitHub profile'],['HISTORY','previous repositories'],['SIGNALS','languages / project history']]
-  },
-  build: {
-    number:'03', title:'BUILD', status:'LIVE PROJECT STATE', stack:'GitHub Webhooks · Redis · ARQ · SSE · FastAPI',
-    nodes:[
-      ['input','COMMIT / PR / TASK UPDATE','GitHub activity'],
-      ['tool','GITHUB WEBHOOK','receive repository events'],
-      ['process','APPEND-ONLY EVENT LOG','preserve project state changes'],
-      ['process','REDIS QUEUE','progress messages'],
-      ['tool','ARQ WORKER','run async state updates'],
-      ['tool','SSE STREAM','push live job progress'],
-      ['output','LIVE TEAM STATUS','current build state']
-    ],
-    branches:[['BUILD SIGNALS','stalled work'],['','uneven ownership'],['','scope drift']],
-    branchOut:'RE-PRIORITIZE REMAINING WORK'
-  },
-  review: {
-    number:'04', title:'REVIEW', status:'CODE → JUDGE → REPORT', stack:'tree-sitter · pgvector · HNSW · RAG · LLM',
-    nodes:[
-      ['input','COMPLETED REPOSITORY','code + README + development context'],
-      ['tool','TREE-SITTER','parse repository into a syntax tree'],
-      ['process','CODE SYNTAX TREE','structured code representation'],
-      ['process','CODE EMBEDDINGS','encode searchable code context'],
-      ['tool','PGVECTOR / HNSW','retrieve similar code context'],
-      ['process','RAG RETRIEVAL','retrieve relevant implementation context'],
-      ['process','TARGETED JUDGE QUESTIONS','questions grounded in shipped code'],
-      ['output','TECHNICAL REVIEW','surface evidence a judge can challenge']
-    ],
-    branches:[['REVIEW SIGNALS','technical weak points'],['','README gaps'],['','judge preparation']],
-    analytics:['Lines of Code','Feature contribution','Temporal Activity Heatmap'],
-    branchOut:'REVIEW OUTPUT → PDF REPORT'
-  }
+<script>
+const revealObserver=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.style.transition='opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)';e.target.style.opacity='1';e.target.style.transform='none';revealObserver.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>revealObserver.observe(x));
+if(window.anime) anime.animate('.hero h1',{translateY:[20,0],opacity:[0,1],duration:850,easing:'easeOutCubic'});
+const data={
+ideate:{number:'01',title:'IDEATE',status:'IDEA PIPELINE',stack:'pdfplumber · LLM · Pydantic',nodes:[['input','CHALLENGE BRIEF / RUBRIC PDF','challenge brief + judging rubric'],['tool','PDFPLUMBER','extract judging criteria'],['process','RUBRIC EXTRACTION','criteria become scoreable checks'],['process','PER-CRITERION LLM SCORING','score the idea against each criterion'],['output','GAP LIST','expose weak / missing areas'],['output','IDEA SCORE','score + actionable gaps']]},
+plan:{number:'02',title:'PLAN',status:'TEAM → TASK GRAPH',stack:'GitHub OAuth · GitHub API · FastAPI · Postgres',nodes:[['input','TEAM + GITHUB','profile + previous repositories'],['tool','GITHUB SKILL PROFILING','infer strengths from profile + repository history'],['process','BOUNDED FEATURE TREE','features with brief descriptions'],['process','CAPACITY CONSTRAINTS','available capacity + hackathon deadline'],['process','TASK ASSIGNMENT','match skills to capacity'],['output','TIME-AWARE TASK BOARD','ownership + deadline-aware execution']]},
+build:{number:'03',title:'BUILD',status:'LIVE PROJECT STATE',stack:'GitHub Webhooks · Redis · ARQ · SSE · FastAPI',nodes:[['input','COMMIT / PR / TASK UPDATE','GitHub activity'],['tool','GITHUB WEBHOOK','receive repository events'],['process','APPEND-ONLY EVENT LOG','preserve project state changes'],['process','REDIS QUEUE','progress messages'],['tool','ARQ WORKER','run async state updates'],['tool','SSE STREAM','push live job progress'],['output','LIVE TEAM STATUS','current build state']],branch:['BUILD SIGNALS','stalled work','uneven ownership','scope drift','RE-PRIORITIZE REMAINING WORK']},
+review:{number:'04',title:'REVIEW',status:'CODE → JUDGE → REPORT',stack:'tree-sitter · pgvector · HNSW · RAG · LLM',nodes:[['input','COMPLETED REPOSITORY','code + README + development context'],['tool','TREE-SITTER','parse repository into a syntax tree'],['process','CODE SYNTAX TREE','structured code representation'],['process','CODE EMBEDDINGS','encode searchable code context'],['tool','PGVECTOR / HNSW','retrieve similar code context'],['process','RAG RETRIEVAL','retrieve relevant implementation context'],['process','TARGETED JUDGE QUESTIONS','questions grounded in shipped code'],['output','TECHNICAL REVIEW','surface evidence a judge can challenge']],branch:['REVIEW SIGNALS','technical weak points','README gaps','judge preparation','REVIEW OUTPUT → PDF REPORT'],analytics:['Lines of Code','Feature contribution','Temporal Activity Heatmap']]}
 };
-
-const modal = document.getElementById('blueprintModal');
-const modalTitle = document.getElementById('modalTitle');
-const modalNumber = document.getElementById('modalNumber');
-const modalStatus = document.getElementById('modalStatus');
-const modalStage = document.getElementById('modalStageKicker');
-const modalMap = document.getElementById('modalMap');
-let activeBlueprint = 'ideate';
-let savedScrollY = 0;
-
-function makeNode(n, i) {
-  return `<div class="bp-node bp-${n[0]}" data-node="${i}"><span>${n[0].toUpperCase()}</span><strong>${n[1]}</strong><small>${n[2]}</small></div>`;
+const modal=document.getElementById('blueprintModal'), map=document.getElementById('modalMap'), title=document.getElementById('modalTitle'), number=document.getElementById('modalNumber'),status=document.getElementById('modalStatus'),kicker=document.getElementById('modalStageKicker');let active='ideate',savedY=0;
+function render(key){active=key;const d=data[key];title.textContent=d.title;number.textContent=d.number;status.textContent=d.status;kicker.textContent=d.title;document.querySelectorAll('[data-blueprint-stage]').forEach(b=>b.classList.toggle('active',b.dataset.blueprintStage===key));
+let cards=d.nodes.map((n,i)=>`<div class="map-node ${n[0]}" style="--i:${i}"><span>${n[0].toUpperCase()}</span><b>${n[1]}</b><small>${n[2]}</small></div>`).join('');
+let arrows=d.nodes.slice(0,-1).map(()=>'<div class="map-arrow"><span></span></div>').join('');
+let branch=d.branch?`<aside class="map-branch"><div class="map-branch-title">${d.branch[0]}</div>${d.branch.slice(1,-1).map(x=>`<div class="map-branch-item">${x}</div>`).join('')}<div class="map-branch-out">↳ ${d.branch[d.branch.length-1]}</div></aside>`:'';
+let analytics=d.analytics?`<aside class="map-analytics"><div class="map-branch-title">CONTRIBUTION ANALYSIS</div>${d.analytics.map(x=>`<div class="map-branch-item">${x}</div>`).join('')}</aside>`:'';
+map.innerHTML=`<div class="map-canvas"><div class="map-flow">${cards}${arrows}</div>${branch}${analytics}<div class="map-stack mono">${d.stack}</div></div>`;
+map.scrollTop=0;map.scrollLeft=0;
+map.querySelectorAll('.map-node').forEach((el,i)=>setTimeout(()=>el.classList.add('show'),Math.min(i*45,240)));
 }
-function renderBlueprint(key, animate=true) {
-  activeBlueprint = key;
-  const d = blueprintData[key];
-  modalTitle.textContent = d.title;
-  modalNumber.textContent = d.number;
-  modalStatus.textContent = d.status;
-  modalStage.textContent = d.title;
-  document.querySelectorAll('[data-blueprint-stage]').forEach(b => b.classList.toggle('active', b.dataset.blueprintStage === key));
-
-  const nodeMarkup = d.nodes.map(makeNode).join('');
-  const arrows = d.nodes.slice(0,-1).map((_,i) => `<div class="bp-arrow" style="--i:${i}"><i></i></div>`).join('');
-  let side = '';
-  if (d.branches) {
-    side = `<aside class="bp-branch"><div class="bp-branch-title">${d.branches[0][0] || 'BUILD SIGNALS'}</div>` +
-      d.branches.map(x => `<div class="bp-branch-item"><b>${x[1]}</b></div>`).join('') +
-      (d.branchOut ? `<div class="bp-branch-out">↳ ${d.branchOut}</div>` : '') + `</aside>`;
-  }
-  let analytics = '';
-  if (d.analytics) {
-    analytics = `<aside class="bp-analytics"><div class="bp-branch-title">CONTRIBUTION ANALYSIS</div>${d.analytics.map(x=>`<div class="bp-branch-item"><b>${x}</b></div>`).join('')}<div class="bp-branch-out">↳ REVIEW OUTPUT</div></aside>`;
-  }
-  modalMap.innerHTML = `<div class="bp-map-inner"><div class="bp-main">${nodeMarkup}${arrows}</div>${side}${analytics}</div>`;
-  if (animate) {
-    modalMap.querySelectorAll('.bp-node').forEach((el,i)=>{
-      el.animate([{opacity:0,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:300,delay:Math.min(i*35,210),easing:'ease-out',fill:'both'});
-    });
-    modalMap.querySelectorAll('.bp-arrow i').forEach((el,i)=>{
-      el.animate([{transform:'scaleY(0)'},{transform:'scaleY(1)'}],{duration:260,delay:100+i*35,easing:'ease-out',fill:'both'});
-    });
-  }
-}
-function openBlueprint(key) {
-  savedScrollY = window.scrollY;
-  renderBlueprint(key, false);
-  modal.classList.add('is-open');
-  modal.setAttribute('aria-hidden','false');
-  document.body.classList.add('modal-open');
-  requestAnimationFrame(()=>document.querySelector('.bp-modal-panel').animate([
-    {opacity:0,transform:'translateY(14px) scale(.985)'},{opacity:1,transform:'translateY(0) scale(1)'}
-  ],{duration:260,easing:'ease-out'}));
-}
-function closeBlueprint() {
-  modal.classList.remove('is-open');
-  modal.setAttribute('aria-hidden','true');
-  document.body.classList.remove('modal-open');
-  window.scrollTo(0,savedScrollY);
-}
-document.querySelectorAll('.expand').forEach(btn=>btn.addEventListener('click',()=>openBlueprint(btn.closest('.stage').dataset.stage)));
-document.querySelector('.modal-close').addEventListener('click',closeBlueprint);
-modal.querySelector('.modal-backdrop').addEventListener('click',closeBlueprint);
-document.querySelectorAll('[data-blueprint-stage]').forEach(btn=>btn.addEventListener('click',()=>renderBlueprint(btn.dataset.blueprintStage,true)));
-document.addEventListener('keydown',e=>{
-  if(!modal.classList.contains('is-open')) return;
-  if(e.key==='Escape') closeBlueprint();
-  if(e.key==='ArrowRight'){const k=Object.keys(blueprintData),i=k.indexOf(activeBlueprint);if(i<k.length-1)renderBlueprint(k[i+1]);}
-  if(e.key==='ArrowLeft'){const k=Object.keys(blueprintData),i=k.indexOf(activeBlueprint);if(i>0)renderBlueprint(k[i-1]);}
-});
-
+function open(key){savedY=window.scrollY;render(key);modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');}
+function close(){modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open');window.scrollTo(0,savedY);}
+document.querySelectorAll('.expand').forEach(b=>b.addEventListener('click',()=>open(b.closest('.stage').dataset.stage)));
+document.querySelector('.modal-close').addEventListener('click',close);document.querySelector('.modal-backdrop').addEventListener('click',close);document.querySelectorAll('[data-blueprint-stage]').forEach(b=>b.addEventListener('click',()=>render(b.dataset.blueprintStage)));
+document.addEventListener('keydown',e=>{if(!modal.classList.contains('is-open'))return;if(e.key==='Escape')close();const keys=Object.keys(data),i=keys.indexOf(active);if(e.key==='ArrowRight'&&i<keys.length-1)render(keys[i+1]);if(e.key==='ArrowLeft'&&i>0)render(keys[i-1]);});
 </script></body></html>
