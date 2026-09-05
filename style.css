@@ -20,8 +20,10 @@ footer{border-top:1px solid var(--line);padding:20px 0;color:#a0979b;font:9px "D
 .details{display:none;margin-top:20px;padding-top:15px;border-top:1px solid #efdde3}
 .stage.open .details{display:block}
 .stage.open .tech{display:none}
+.stage.open{padding-bottom:22px}
 .stage.open .expand{position:static;display:block;margin-top:14px}
 .detail-row{display:flex;justify-content:space-between;gap:15px;padding:8px 0;border-bottom:1px solid #f3e7eb;font-size:9px;line-height:1.45}
 .detail-row:last-child{border-bottom:0}
 .detail-row span{flex:0 0 58px;color:#bd315b;font:8px "DM Mono",monospace}
-.detail-row b{font-weight:500;text-align:right;color:var(--muted)}
+.detail-row b{font-weight:500;text-align:right;color:var(--muted);max-width:78%}
+.detail-stack{margin-top:12px;color:#a0979b;font:8px "DM Mono",monospace;letter-spacing:.01em}.detail-stack span{color:#bd315b}
